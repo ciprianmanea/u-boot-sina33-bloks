@@ -478,11 +478,7 @@ static struct musb_hdrc_config musb_config = {
 };
 
 static struct musb_hdrc_platform_data musb_plat = {
-#if defined(CONFIG_MUSB_HOST)
-	.mode           = MUSB_HOST,
-#else
-	.mode		= MUSB_PERIPHERAL,
-#endif
+	.mode           = CONFIG_MUSB_SUNXI_MODE,
 	.config         = &musb_config,
 	.power          = 250,
 	.platform_ops	= &sunxi_musb_ops,

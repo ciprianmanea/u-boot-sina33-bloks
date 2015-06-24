@@ -335,6 +335,7 @@ extern int soft_i2c_gpio_scl;
 
 #ifdef CONFIG_USB_MUSB_SUNXI
 #define CONFIG_MUSB_HOST
+#define CONFIG_MUSB_SUNXI_MODE	MUSB_HOST
 #define CONFIG_MUSB_PIO_ONLY
 #endif
 
