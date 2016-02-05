@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+DH_VERBOSE = 1
+DPKG_EXPORT_BUILDFLAGS = 1
+
+MAKEVAR=ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+
+%:
+		dh $@ --parallel
+
+override_dh_auto_configure:
+	$(MAKEVAR) $(MAKE) Sinlinx_SinA33_defconfig
+
+override_dh_auto_build:
+	$(MAKEVAR) $(MAKE)
+
+override_dh_auto_install:
+	install -d debian/u-boot-sina33/boot
+	cp u-boot-sunxi-with-spl.bin debian/u-boot-sina33/boot
+
+override_dh_auto_test:
+	echo "nothing to test"

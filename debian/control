@@ -1,0 +1,12 @@
+Source: u-boot
+Section: text
+Priority: optional
+Maintainer: Manuel Traut <manut@linutronix.de>
+Build-Depends: debhelper (>=9), make, gcc-arm-linux-gnueabihf
+Standards-Version: 3.9.6
+Homepage: https://denx.com
+
+Package: u-boot-sina33
+Architecture: armhf
+Description: bootloader for sinA33 evalboard
+ this is the u-boot bootloader for cortex a33 sin evalboard

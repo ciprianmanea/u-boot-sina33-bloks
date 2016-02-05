@@ -1,0 +1,5 @@
+u-boot (2015.07-rc2) jessie; urgency=medium
+
+  * Initial Release.
+
+ -- Manuel Traut <manut@linutronix.de>  Fri, 05 Feb 2016 16:53:08 +0100
